@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberShield | Website Security Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">🛡️ CyberShield</div>
+
+        <div class="nav-status">
+            <span class="dot"></span>
+            SECURITY SYSTEM ONLINE
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+
+            <p class="eyebrow">WEB SECURITY ANALYSIS</p>
+
+            <h1>
+                Check your website's
+                <span>security.</span>
+            </h1>
+
+            <p class="subtitle">
+                Analyze basic security configurations,
+                HTTPS protection and security headers.
+            </p>
+
+            <div class="scanner">
+
+                <input
+                    type="url"
+                    id="websiteURL"
+                    placeholder="https://example.com"
+                >
+
+                <button onclick="startScan()">
+                    SCAN WEBSITE
+                </button>
+
+            </div>
+
+            <p class="notice">
+                ⚠️ Scan only websites you own or have permission to test.
+            </p>
+
+        </section>
+
+
+        <section id="results" class="results hidden">
+
+            <div class="results-header">
+
+                <div>
+                    <p class="eyebrow">SCAN COMPLETE</p>
+
+                    <h2>Security Overview</h2>
+
+                    <p id="scannedURL"></p>
+                </div>
+
+                <div class="score">
+
+                    <span id="score">--</span>
+
+                    <small>
+                        SECURITY SCORE
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="checks">
+
+                <div class="check">
+                    <div class="icon">✓</div>
+
+                    <div>
+                        <h3>HTTPS</h3>
+
+                        <p>
+                            Secure encrypted connection
+                        </p>
+                    </div>
+
+                    <strong id="httpsStatus">
+                        --
+                    </strong>
+                </div>
+
+
+                <div class="check">
+                    <div class="icon">✓</div>
+
+                    <div>
+                        <h3>Content Security Policy</h3>
+
+                        <p>
+                            Helps protect against certain
+                            browser-based attacks.
+                        </p>
+                    </div>
+
+                    <strong id="cspStatus">
+                        --
+                    </strong>
+                </div>
+
+
+                <div class="check">
+                    <div class="icon">✓</div>
+
+                    <div>
+                        <h3>HSTS</h3>
+
+                        <p>
+                            Encourages browsers to use HTTPS.
+                        </p>
+                    </div>
+
+                    <strong id="hstsStatus">
+                        --
+                    </strong>
+                </div>
+
+
+                <div class="check">
+                    <div class="icon">✓</div>
+
+                    <div>
+                        <h3>X-Content-Type-Options</h3>
+
+                        <p>
+                            Helps prevent MIME-type sniffing.
+                        </p>
+                    </div>
+
+                    <strong id="contentStatus">
+                        --
+                    </strong>
+                </div>
+
+
+                <div class="check">
+                    <div class="icon">✓</div>
+
+                    <div>
+                        <h3>Referrer Policy</h3>
+
+                        <p>
+                            Controls referrer information.
+                        </p>
+                    </div>
+
+                    <strong id="referrerStatus">
+                        --
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        CYBERSHIELD • SECURITY AWARENESS PROJECT
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
